@@ -6,8 +6,7 @@ At least I warned you in the description; the code isn't exactly elegant, but I 
 Coded entirely by me, and me alone, I'm trying to experiment with things like policy-based template programming and dynamic dispatch, but always with zero compile time. It's very raw, but I think there are some very interesting things to be gained from it. Well, until next time, and as always, feel free to contact me if you'd like to learn more about the magic and world of metaprogramming. I'm not an expert, but I'm passionate enough to know what I'm talking about ;)
 
 ## I find it extremely elegant and conceptually very promising.
-#### CRTP + SFINAE + Zero-Overhead
-#### Compile-Time Dispatch + Variadic TMP
+#### CRTP + SFINAE + Zero-Overhead + Compile-Time Dispatch + Variadic TMP
 ```cpp
 template<typename Variation>
 class IPrinter {
