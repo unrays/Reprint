@@ -27,6 +27,11 @@ public:
 };
 ```
 
+```cpp
+IPrinter<ConsolePrinter> consolePrinter;
+consolePrinter.print(5);
+```
+
 ### As always, here's the rest of the code ;)
 ```cpp
 // Copyright (c) December 2025 Félix-Olivier Dumas. All rights reserved.
