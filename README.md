@@ -28,8 +28,10 @@ public:
 ```
 
 ```cpp
-IPrinter<ConsolePrinter> consolePrinter;
-consolePrinter.print(5);
+int main() {
+    IPrinter<ConsolePrinter> consolePrinter;
+    consolePrinter.print(5);
+}
 ```
 
 ### As always, here's the rest of the code ;)
