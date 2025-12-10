@@ -27,6 +27,7 @@ public:
 };
 ```
 
+### As always, here's the rest of the code ;)
 ```cpp
 // Copyright (c) December 2025 Félix-Olivier Dumas. All rights reserved.
 // Licensed under the terms described in the LICENSE file
