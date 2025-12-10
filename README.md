@@ -30,6 +30,7 @@ public:
 ```cpp
 int main() {
     IPrinter<ConsolePrinter> consolePrinter;
+
     consolePrinter.print("Hello World!");
     consolePrinter.print(67);
 }
