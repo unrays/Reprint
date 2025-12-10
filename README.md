@@ -5,6 +5,27 @@ At least I warned you in the description; the code isn't exactly elegant, but I 
 
 Coded entirely by me, and me alone, I'm trying to experiment with things like policy-based template programming and dynamic dispatch, but always with zero compile time. It's very raw, but I think there are some very interesting things to be gained from it. Well, until next time, and as always, feel free to contact me if you'd like to learn more about the magic and world of metaprogramming. I'm not an expert, but I'm passionate enough to know what I'm talking about ;)
 
+## I find it extremely elegant and sexy
+```cpp
+template<typename Variation>
+class IPrinter {
+public:
+    template<typename... Args>
+    auto print(Args&&... args) noexcept ->
+        std::enable_if_t<std::is_void_v
+            <decltype(std::declval<Variation>().print(std::declval<Args>()...))>,
+        void> { static_cast<Variation*>(this)->print(std::forward<Args>(args)...); }
+};
+
+class ConsolePrinter : public IPrinter<ConsolePrinter> {
+public:
+    template<typename T>
+    void print(const T& printable) const noexcept {
+        std::cout << printable << std::endl;
+    }
+};
+```
+
 ```cpp
 // Copyright (c) December 2025 Félix-Olivier Dumas. All rights reserved.
 // Licensed under the terms described in the LICENSE file
